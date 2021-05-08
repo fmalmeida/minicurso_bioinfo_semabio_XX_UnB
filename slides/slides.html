@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Minicurso de Bioinformática</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Felipe M. Almeida" />
+    <meta name="author" content="almeidafmarques@gmail.com" />
+    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/freezeframe-5.0.2/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe-0.0.1/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"<i class=\"fa fa-times-circle\" style=\"color: #F94144\"><\/i>"})</script>
+    <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
+    <link href="libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Minicurso de Bioinformática
+## XX SemaBio UnB
+### Felipe M. Almeida
+### <a href="mailto:almeidafmarques@gmail.com" class="email">almeidafmarques@gmail.com</a>
+### Laboratório de Genômica computacional, Bloco K, Instituto de Biologia, UnB.
+### Julho de 2021
+
+---
+
+
+
+
+
+
+class: middle
+
+# Olá!
+
+- Bem-vindos ao minicurso de Bioinformática da SemaBio, UnB.
+
+- O curso será realizado em dois dias, nos quais:
+    - Discutiremos as principais frentes de pesquisa e aplicação da Bioinformática na atualidade;
+    
+    - Realizaremos exercícios para estabelecer o primeiro contato com a área.
+
+---
+class: middle, center
+
+# Temas a serem abordados
+
+.left[
+- [O que é a Bioinformática?](#sobre)
+
+- [A essencialidade da Bioinformática](#essencialidade)
+
+- [Principais conceitos (ou terminologias)](#conceitos)
+
+- [Aplicações da Bioinformática](#aplicacoes)
+
+- [Os pilares da Bioinformática](#pilares)
+
+]
+
+---
+class: inverse, center, middle
+name: sobre
+
+# O que é a Bioinformática?
+
+---
+
+# O que é a Bioinformática?
+
+--
+
+- Campo interdisciplinar
+
+    - Biologia, Genética, ciência da computação, estatística e matemática.
+
+--
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/bioinformatics-computer-science-computational-biology.png" alt="Composição da Bioinformática." width="300" /&gt;
+&lt;p class="caption"&gt;Composição da Bioinformática.&lt;/p&gt;
+&lt;/div&gt;
+
+.footnote[
+&lt;p style="font-size:0.5em"&gt;Fonte: https://microbenotes.com/bioinformatics-introduction-and-applications/&lt;/p&gt; 
+]
+
+---
+
+# O que é a Bioinformática?
+
+- Campo interdisciplinar
+
+    - Biologia, Genética, ciência da computação, estatística e matemática.
+
+- Tem como principal **missão** solucionar problemas e questionamentos biológicos através de experimentos e metodologias **computacionais**.
+
+--
+
+    - Em resumo, é a área da ciência da computação que trabalha com análises de sequências de moléculas Biológicas.
+    
+    - Geralmente sequências de DNA, RNA e proteínas.
+--
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt0[
+&lt;svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:black;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"&gt;&lt;/path&gt;&lt;/svg&gt; You can think about bioinformatics as essentially the linguistics part of genetics. That is, the linguistics people are looking at patterns in language, and that’s what bioinformatics people do–looking for patterns within sequences of DNA or protein.
+
+.tr[
+-- &lt;cite&gt;Christopher P. Austin, M.D.&lt;/cite&gt;
+]]
+---
+class: inverse, center, middle
+name: essencialidade
+
+# Por que ela é essencial?
+
+---
+
+# Por que ela é essencial?
+
+.pull-left[
+- Nos últimos anos, avanços tecnológicos permitiram o desenvolvimento metodologias custo-efetivas de alto desempenho para caracterização de sistemas biológicos.
+
+    - Este baixo custo nos levou a era do [_big data_](https://en.wikipedia.org/wiki/Big_data).
+{{content}}
+
+]
+--
+
+- &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"&gt;&lt;/path&gt;&lt;/svg&gt; custos = rotina = &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"&gt;&lt;/path&gt;&lt;/svg&gt; dados
+{{content}}
+
+--
+
+    - Por exemplo, uma das corridas de sequenciamento de menor desempenho da [plataforma Illumina](https://www.illumina.com/science/technology/next-generation-sequencing/sequencing-technology.html) chega a gerar uma quantidade de dados de 1.5 - 2.5 Gb.
+
+--
+.pull-right[
+    
+- Desta forma, a complexidade dos dados e a grande quantidade em que são gerados tornam necessário o auxílio de máquinas para sua análise e interpretação.
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/fastq_fig.jpg" alt="Estrutura de um arquivo FASTQ." width="450" /&gt;
+&lt;p class="caption"&gt;Estrutura de um arquivo FASTQ.&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+---
+class: inverse, center, middle
+name: conceitos
+
+# Principais conceitos
+
+---
+
+# Principais conceitos
+
+- Sem dúvidas, **sequências de DNA** são o tipo de dado mais abundante em Bioinformática.
+
+--
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/sanger-sequencing_dna-structure.png" alt="Estrutura e composição do DNA" width="500" /&gt;
+&lt;p class="caption"&gt;Estrutura e composição do DNA&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+# Principais conceitos
+
+- Sem dúvidas, **sequências de DNA** são o tipo de dado mais abundante em Bioinformática.
+
+- Em um organismo, a sequência completa de seu DNA é denominada **_genoma_**.
+
+    - O tamanho de um genoma é extremamente variável...
+
+--
+
+- Por exemplo, o tamanho médio de um genoma bacteriano da espécie _Escherichia coli_ é de aproximadamente 4,6 Mb, enquanto que o genoma humano tem em média aproximadamente 3.200 Mb.
+    
+&lt;img src="images/genome-organisation-in-eukaryotes-19-638.jpg" width="400" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Principais conceitos
+
+- Sem dúvidas, **sequências de DNA** são o tipo de dado mais abundante em Bioinformática.
+
+- Em um organismo, a sequência completa de seu DNA é denominada **_genoma_**.
+    - O tamanho de um genoma é extremamente variável...
+
+- Genomas, por sua vez, são constituídos por diversas regiões/sequências menores que podem ser classificadas em:
+
+--
+
+    - **Codificantes**: _que codificam proteínas_
+    
+    - **Não codificantes**: _que não codificam proteínas_
+
+--
+
+- Destas regiões, surge o conceito de **gene**, que são pequenas regiões do genoma que contém instruções para a produção de uma molécula específica (**geralmente** uma proteína, mas não sempre).
+
+---
+
+# Principais conceitos
+
+- Destes conceitos, surge um dos fluxos de informação mais conhecidos na Biologia, chamado de **_Dogma central da Biologia_**.
+
+--
+
+- Nele, uma molécula de DNA é utilizada para a síntese de um RNA mensageiro (transcrição), que é então usado para a síntese de proteínas através de tradução.
+
+    - Temos na figura a representação das principais moléculas biológicas analisadas/estudadas pela Bioinformática.
+
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/dogma-central-biologia-molecular2.jpg" alt="Dogma central da Biologia." width="500" /&gt;
+&lt;p class="caption"&gt;Dogma central da Biologia.&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: inverse, center, middle
+
+# Áreas da Bioinformática
+
+---
+class: middle
+
+# Áreas da Bioinformática
+
+- Desta forma, a Bioinformática compreende o estudo e análise de todas as moléculas biológicas de um organismo.
+
+    - Não necessariamente ao mesmo tempo!
+
+- Consequentemente, divide-se em diversas áreas (_ômicas_) que são nomeadas de acordo com o tipo de dado e molécula analisados.
+
+    - Dentre elas, as principais ômicas atualmente são: a **Genômica**, **Transcritômica**, **Proteômica** e **Metabolômica**.
+
+---
+class: middle
+
+- **Genômica**
+
+    - É o termo atribuído ao estudo do genoma, objetivando entender a organização e a função de genes e da informação genética.
+
+--
+
+- **Transcritômica**
+
+    - É o termo atribuído ao estudo do conjunto de transcritos (sequências de RNA) de um organismo, tem como principal objetivo obter, analisar e interpretar dados da expressão gênica.
+
+--
+
+- **Proteômica**
+
+    - É o termo atribuído a estudos globais e em larga escala de Proteomas (conjunto de proteínas e suas isoformas). Tem como principal objetivo fornecer arcabouço necessário para o entendimento de processos fisiológicos e das relações entre [genótipo](https://www.genome.gov/genetics-glossary/genotype) e [fenótipo](https://www.genome.gov/genetics-glossary/Phenotype).
+
+--
+
+- **Metabolômica**
+
+    - É o termo atribuído aos estudos e análises mais abrangentes e quantitativos do metaboloma (conjunto de metabólitos) de um organismo.
+
+---
+class: middle
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/Infusion-of-biological-omics-with-bioinformatics.png" alt="Resumo gráfico das principais ômicas aplicadas em Bioinformática." width="700" /&gt;
+&lt;p class="caption"&gt;Resumo gráfico das principais ômicas aplicadas em Bioinformática.&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: inverse, center, middle
+name: aplicacoes
+
+# Aplicações da Bioinformática
+
+---
+
+# Aplicações da Bioinformática
+
+.pull-left[
+- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
+
+    - Determinar as funções gênicas ou proteicas.
+    {{content}}
+]
+
+---
+
+# Aplicações da Bioinformática
+
+.pull-left[
+- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
+
+    - Determinar as funções gênicas ou proteicas.
+  
+- Outros casos também bastante comuns são:
+
+    - Estabelecimento de relações evolutivas (Filogenia)
+    
+    - Predição de estruturas 3D de proteínas
+    
+    - Quantificação da expressão gênica
+    
+    - Medicina personalizada
+    
+    - Desenvolvimento de drogas
+    
+    - Estudo das mudanças climáticas, etc.
+]
+
+.pull-right[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/precision_medicine.jpg" alt="Genômica &amp;quot;translacional&amp;quot; e medicina de precisão de doenças complexas." width="450" /&gt;
+&lt;p class="caption"&gt;Genômica "translacional" e medicina de precisão de doenças complexas.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+class: middle
+
+# Soluções bioinformáticas
+
+- De maneira geral, soluções bioinformáticas envolvem:
+
+    - Coletar estatísticas/informações de dados biológicos.
+    
+    - Desenvolver um modelo computacional.
+    
+    - Resolver um problema de modelagem computacional.
+    
+    - Testar e avaliar algoritmos computacionais.
+    
+    - Interpretar e analisar os dados com auxílio de bancos de dados.
+
+---
+class: inverse, center, middle
+
+# Aplicações recentes
+
+---
+
+# COVID-19
+
+- A Bioinformática está tendo papel fundamental no estudo, catalogação e vigilância da COVID-19 (causada pelo Sars-CoV-2)
+
+    - [Essential interpretations of bioinformatics in COVID-19 pandemic](https://www.sciencedirect.com/science/article/abs/pii/S2214540020301997?via%3Dihub)
+    
+    - [Computational strategies to combat COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research](https://academic.oup.com/bib/article/22/2/642/5955939) (resumo mostrado abaixo)
+    
+&lt;img src="images/covid-19-tools-review-abstract.png" width="700" style="display: block; margin: auto;" /&gt;
+
+---
+
+# COVID-19
+
+- Diversas ferramentas e bancos de dados estão se provando essenciais nesta luta:
+
+---
+class: inverse, center, middle
+name: pilares
+
+# Os pilares da Bioinformática
+
+---
+class: middle
+
+# Os pilares da Bioinformática
+
+- Para alcançar analisar os dados e alcançar seus objetivos, a Bioinformática conta com dois pilares fundamentais:
+
+    - **Bancos de dados biológicos**
+    - **_Software_ e ferramentas especializadas**.
+    - **_Open source Science_**
+
+---
+
+# Bancos de dados biológicos
+
+- Bancos de dados são desenvolvidos com o **principal objetivo** de organizar um conjunto de informações de maneira hierarquizada para permitir a rápida recuperação de informações.
+
+--
+
+.pull-left[
+&lt;img src="images/bioinformatics-databases-1.png" width="250" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+&lt;img src="images/bioinformatics-databases-2.jpeg" width="350" style="display: block; margin: auto;" /&gt;
+].pull-right[
+
+&lt;img src="images/exploring_databases.png" width="400" style="display: block; margin: auto;" /&gt;
+
+]
+
+.footnote[
+&lt;p style="font-size:0.5em"&gt;Fonte das imagens: Digital World Biology&lt;/p&gt; 
+]
+
+---
+
+# Bancos de dados biológicos
+
+- Por isso ... deve-se sempre tomar bastante cuidado.
+
+- É de suma importância conhecer e entender as capacidades e limitações de cada banco de dados.
+
+&lt;br&gt;
+
+&lt;img src="images/lots-of-dbs.png" width="400" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+&lt;p style="font-size:0.5em"&gt;Fonte das imagens: https://doi.org/10.1371/journal.pcbi.1005128&lt;/p&gt; 
+]
+
+---
+
+# Ferramentas de bioinformática
+
+- As ferramentas bioinformáticas (_Open access_ &lt;sup&gt;&lt;svg viewBox="0 0 256 512" style="position:relative;display:inline-block;top:.1em;height:1.5em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;g label="icon" id="layer6" groupmode="layer"&gt;    &lt;path id="path42" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1" d="m 128.23305,64.000002 c -56.460308,0 -102.670899,46.211658 -102.670899,102.672438 v 14.02215 h 41.118177 v -14.02215 c 0,-34.23923 27.314786,-61.55425 61.552722,-61.55425 34.23793,0 61.55272,27.31502 61.55272,61.55425 v 56.25186 c -18.11316,-10.82348 -39.2508,-17.06007 -61.78576,-17.06007 -66.62047,0 -121.0678874,54.44743 -121.0678874,121.06788 C 6.9321226,393.55258 61.37954,448 128.00001,448 c 66.62047,0 121.06787,-54.44742 121.06787,-121.06789 0,-23.29025 -6.66132,-45.0879 -18.16393,-63.59639 v -96.66328 c 0,-56.46078 -46.21063,-102.672437 -102.6709,-102.672438 z m -0.23301,182.982408 c 44.39846,0 79.94968,35.55122 79.94968,79.9497 0,44.39849 -35.55122,79.94973 -79.94968,79.94973 -44.398491,0 -79.949707,-35.55124 -79.949707,-79.94973 0,-44.39848 35.551216,-79.9497 79.949707,-79.9497 z m 0.39478,46.39298 c -18.7346,0 -33.921611,15.187 -33.921611,33.92161 0,18.73459 15.187011,33.92238 33.921611,33.92238 18.7346,0 33.92238,-15.18779 33.92238,-33.92238 0,-18.73461 -15.18778,-33.92161 -33.92238,-33.92161 z"&gt;&lt;/path&gt;  &lt;/g&gt;&lt;/svg&gt;&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M22.2 32A16 16 0 0 0 6 47.8a26.35 26.35 0 0 0 .2 2.8l67.9 412.1a21.77 21.77 0 0 0 21.3 18.2h325.7a16 16 0 0 0 16-13.4L505 50.7a16 16 0 0 0-13.2-18.3 24.58 24.58 0 0 0-2.8-.2L22.2 32zm285.9 297.8h-104l-28.1-147h157.3l-25.2 147z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/sup&gt;) tem enorme impacto no avanço da Bioinformática e na mudança de paradigmas tanto da pesquisa (aquisição) quanto da exploração de informação.
+    
+    - Elas são imprescindíveis pois permitem que pesquisadores analisem e interpretem, de forma automatizada e eficiente, a grande quantidade e diversidade de dados biológicos produzidos atualmente.
+
+&lt;br&gt;
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt0[
+  &lt;svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:black;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"&gt;&lt;/path&gt;&lt;/svg&gt; The development of novel and powerful bioinformatics tools dedicated to biological data acquisition, data mining, and analysis empowered both the basic and applied life sciences research.
+  
+  .tr[
+  -- Sousa, Sílvia et. al. 2016&lt;sup&gt; 1&lt;/sup&gt;
+  ]
+]
+
+.footnote[
+&lt;p style="font-size:0.6em"&gt;
+&lt;br&gt;
+&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt;: https://github.com/
+&lt;br&gt;
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M22.2 32A16 16 0 0 0 6 47.8a26.35 26.35 0 0 0 .2 2.8l67.9 412.1a21.77 21.77 0 0 0 21.3 18.2h325.7a16 16 0 0 0 16-13.4L505 50.7a16 16 0 0 0-13.2-18.3 24.58 24.58 0 0 0-2.8-.2L22.2 32zm285.9 297.8h-104l-28.1-147h157.3l-25.2 147z"&gt;&lt;/path&gt;&lt;/svg&gt;: https://bitbucket.org
+&lt;br&gt;
+&lt;b&gt;1&lt;/b&gt;: https://doi.org/10.1155/2016/3603827
+&lt;/p&gt; 
+]
+
+---
+
+# Por exemplo ...
+
+### A montagem de genomas
+
+- O que significa montar um genoma?
+
+--
+
+    - Por montagem de genoma entende-se encontrar sobreposições entre as pequenas "peças" (sequências) adquiridas durante o sequenciamento e assim produzir uma sequência, ou uma peça, maior (_contigs_).
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/genome-assembly-theory.jpg" alt="Teoria da montagem de genomas." width="400" /&gt;
+&lt;p class="caption"&gt;Teoria da montagem de genomas.&lt;/p&gt;
+&lt;/div&gt;
+    
+---
+
+# Mas ...
+
+- Ao sequenciar um genoma obtemos milhões (geralmente 1-5 milhões por amostra) de pequenos fragmentos do genoma total.
+
+    - Como poderíamos montar um quebra-cabeças assim tão grande, e para piorar, tão repetitivo?
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/genome-assembly.png" alt="O problema da montagem de genomas." width="500" /&gt;
+&lt;p class="caption"&gt;O problema da montagem de genomas.&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+# Ferramentas computacionais são essenciais
+
+- Esta tarefa (da montagem de genomas) seria impossível de ser realizada manualmente
+
+- Por isso, ferramentas computacionais fazem parte da essência da Bioinformática
+
+    - Por exemplo, as ferramentas utilizadas para a montagem de genomas são denominadas "montadores" (_assemblers_, em inglês)
+
+---
+
+    - Porém, assim como acontece com os bancos de dados, existem inúmeras ferramentas disponíveis para a mesma tarefa, e cada um com sua particularidade e objetivo
+    
+    - Por isso, é muito importante entendê-las antes de usá-las para procurar aquela que mais se adeque aos seus objetivos ... Muitas vezes, mais de uma serão necessárias para comparar ou complementar os resultados
+    
+&lt;img src="images/genome-assembly-workflow.png" width="800" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+&lt;p style="font-size:0.5em"&gt;Fonte: https://f1000research.com/articles/7-148&lt;/p&gt; 
+]
+
+---
+class: inverse, center, middle
+name: break
+
+# Pausa
+
+### Alguma dúvida?
+
+&lt;center&gt;
+&lt;div class="tenor-gif-embed" data-postid="6081931" data-share-method="host" data-width="35%" data-aspect-ratio="1.565217391304348"&gt;&lt;a href="https://tenor.com/view/confused-math-what-wtf-peep-gif-6081931"&gt;Confused Math GIF&lt;/a&gt; from &lt;a href="https://tenor.com/search/confused-gifs"&gt;Confused GIFs&lt;/a&gt;&lt;/div&gt;&lt;script type="text/javascript" async src="https://tenor.com/embed.js"&gt;&lt;/script&gt;
+&lt;/center&gt;
+
+---
+
+# Referências
+
+- Introduction to bioinformatics - https://pubmed.ncbi.nlm.nih.gov/24272431/
+- NIH Bioinformatics - https://www.genome.gov/genetics-glossary/Bioinformatics
+- Bioinformática (Big Data) - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5604462/
+- Quantidade aproximada de dados por sequenciamentos Illumina - https://support.illumina.com/bulletins/2018/01/approximate-sizes-of-sequencing-run-output-folders.html
+- Genoma da E. coli K-12 - https://pubmed.ncbi.nlm.nih.gov/9278503/
+- O genoma humano (NCBI) - https://www.ncbi.nlm.nih.gov/books/NBK21134/
+- Aplicações da Bioinformática (JPB) - https://www.longdom.org/scholarly/applications-of-bioinformatics-journals-articles-ppts-list-2874.html
+- Bioinformatics Applications in Life Sciences and Technologies - https://doi.org/10.1155/2016/3603827
+- Bioinformatics- Introduction and Applications: https://microbenotes.com/bioinformatics-introduction-and-applications/
+- Translational genomics and precision medicine: Moving from the lab to the clinic - https://science.sciencemag.org/content/365/6460/1409/tab-figures-data
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
