@@ -1,3 +1,6 @@
 theme: jekyll-theme-leap-day
+baseurl: https://fmalmeida.github.io/minicurso_bioinfo_semabio_XX_UnB
 title: Minicurso de Bioinformática (XX SemaBio UnB)
 description: Um pequeno repositório para armazenar os principais links do minicurso de Bioinformática ministrado durante a XX semabio de modo a deixá-los abertos e arquivados.
+gems:
+  - jekyll-font-awesome-sass
