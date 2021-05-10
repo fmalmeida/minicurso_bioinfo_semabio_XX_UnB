@@ -244,145 +244,6 @@ include_graphics('images/dogma-central-biologia-molecular2.jpg')
 
 ---
 class: inverse, center, middle
-
-# Áreas da Bioinformática
-
----
-class: middle
-
-# Áreas da Bioinformática
-
-- Desta forma, a Bioinformática compreende o estudo e análise de todas as moléculas biológicas de um organismo.
-
-    - Não necessariamente ao mesmo tempo!
-
-- Consequentemente, divide-se em diversas áreas (_ômicas_) que são nomeadas de acordo com o tipo de dado e molécula analisados.
-
-    - Dentre elas, as principais ômicas atualmente são: a **Genômica**, **Transcritômica**, **Proteômica** e **Metabolômica**.
-
----
-class: middle
-
-- **Genômica**
-
-    - É o termo atribuído ao estudo do genoma, objetivando entender a organização e a função de genes e da informação genética.
-
---
-
-- **Transcritômica**
-
-    - É o termo atribuído ao estudo do conjunto de transcritos (sequências de RNA) de um organismo, tem como principal objetivo obter, analisar e interpretar dados da expressão gênica.
-
---
-
-- **Proteômica**
-
-    - É o termo atribuído a estudos globais e em larga escala de Proteomas (conjunto de proteínas e suas isoformas). Tem como principal objetivo fornecer arcabouço necessário para o entendimento de processos fisiológicos e das relações entre [genótipo](https://www.genome.gov/genetics-glossary/genotype) e [fenótipo](https://www.genome.gov/genetics-glossary/Phenotype).
-
---
-
-- **Metabolômica**
-
-    - É o termo atribuído aos estudos e análises mais abrangentes e quantitativos do metaboloma (conjunto de metabólitos) de um organismo.
-
----
-class: middle
-
-```{r, fig.align='center', fig.cap='Resumo gráfico das principais ômicas aplicadas em Bioinformática.', out.width='700', echo=FALSE}
-include_graphics('images/Infusion-of-biological-omics-with-bioinformatics.png')
-```
-
----
-class: inverse, center, middle
-name: aplicacoes
-
-# Aplicações da Bioinformática
-
----
-
-# Aplicações da Bioinformática
-
-.pull-left[
-- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
-
-    - Determinar as funções gênicas ou proteicas.
-    {{content}}
-]
-
----
-
-# Aplicações da Bioinformática
-
-.pull-left[
-- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
-
-    - Determinar as funções gênicas ou proteicas.
-  
-- Outros casos também bastante comuns são:
-
-    - Estabelecimento de relações evolutivas (Filogenia)
-    
-    - Predição de estruturas 3D de proteínas
-    
-    - Quantificação da expressão gênica
-    
-    - Medicina personalizada
-    
-    - Desenvolvimento de drogas
-    
-    - Estudo das mudanças climáticas, etc.
-]
-
-.pull-right[
-```{r, fig.align='center', fig.cap='Genômica "translacional" e medicina de precisão de doenças complexas.', out.width='450', echo=FALSE}
-include_graphics('images/precision_medicine.jpg')
-```
-]
-
----
-class: middle
-
-# Soluções bioinformáticas
-
-- De maneira geral, soluções bioinformáticas envolvem:
-
-    - Coletar estatísticas/informações de dados biológicos.
-    
-    - Desenvolver um modelo computacional.
-    
-    - Resolver um problema de modelagem computacional.
-    
-    - Testar e avaliar algoritmos computacionais.
-    
-    - Interpretar e analisar os dados com auxílio de bancos de dados.
-
----
-class: inverse, center, middle
-
-# Aplicações recentes
-
----
-
-# COVID-19
-
-- A Bioinformática está tendo papel fundamental no estudo, catalogação e vigilância da COVID-19 (causada pelo Sars-CoV-2)
-
-    - [Essential interpretations of bioinformatics in COVID-19 pandemic](https://www.sciencedirect.com/science/article/abs/pii/S2214540020301997?via%3Dihub)
-    
-    - [Computational strategies to combat COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research](https://academic.oup.com/bib/article/22/2/642/5955939) (resumo mostrado abaixo)
-    
-```{r, fig.align='center', fig.cap='', out.width='700', echo=FALSE}
-include_graphics('images/covid-19-tools-review-abstract.png')
-```
-
----
-
-# COVID-19
-
-- Diversas ferramentas e bancos de dados estão se provando essenciais nesta luta:
-
----
-class: inverse, center, middle
 name: pilares
 
 # Os pilares da Bioinformática
@@ -526,16 +387,149 @@ include_graphics("images/genome-assembly-workflow.png")
 ]
 
 ---
+class: middle
+
+# Soluções bioinformáticas
+
+- De maneira geral, soluções bioinformáticas envolvem:
+
+    - Coletar estatísticas/informações de dados biológicos.
+    
+    - Desenvolver um modelo computacional.
+    
+    - Resolver um problema de modelagem computacional.
+    
+    - Testar e avaliar algoritmos computacionais.
+    
+    - Interpretar e analisar os dados com auxílio de bancos de dados.
+
+---
 class: inverse, center, middle
 name: break
 
 # Pausa
 
-### Alguma dúvida?
+### Alguma dúvida até o momento?
 
 <center>
 <div class="tenor-gif-embed" data-postid="6081931" data-share-method="host" data-width="35%" data-aspect-ratio="1.565217391304348"><a href="https://tenor.com/view/confused-math-what-wtf-peep-gif-6081931">Confused Math GIF</a> from <a href="https://tenor.com/search/confused-gifs">Confused GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </center>
+
+---
+class: inverse, center, middle
+name: aplicacoes
+
+# Aplicações da Bioinformática
+
+---
+
+# Aplicações da Bioinformática
+
+.pull-left[
+- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
+
+    - Determinar as funções gênicas ou proteicas.
+  
+- Outros casos também bastante comuns são:
+
+    - Estabelecimento de relações evolutivas (Filogenia)
+    
+    - Predição de estruturas 3D de proteínas
+    
+    - Quantificação da expressão gênica
+    
+    - Medicina personalizada
+    
+    - Desenvolvimento de drogas
+    
+    - Estudo das mudanças climáticas, etc.
+]
+
+.pull-right[
+```{r, fig.align='center', fig.cap='Genômica "translacional" e medicina de precisão de doenças complexas.', out.width='450', echo=FALSE}
+include_graphics('images/precision_medicine.jpg')
+```
+]
+
+---
+class: inverse, center, middle
+
+# Áreas da Bioinformática
+
+---
+class: middle
+
+# Áreas da Bioinformática
+
+- Desta forma, a Bioinformática compreende o estudo e análise de todas as moléculas biológicas de um organismo.
+
+    - Não necessariamente ao mesmo tempo!
+
+- Consequentemente, divide-se em diversas áreas (_ômicas_) que são nomeadas de acordo com o tipo de dado e molécula analisados.
+
+    - Dentre elas, as principais ômicas atualmente são: a **Genômica**, **Transcritômica**, **Proteômica** e **Metabolômica**.
+
+---
+
+# **Genômica**
+
+- É o termo atribuído ao estudo do genoma, objetivando entender a organização e a função de genes e da informação genética.
+
+--
+
+```{r, fig.align='center', fig.cap='', out.width='500', echo=FALSE}
+include_graphics("images/captura_cancer_genomics_abstract.png")
+```
+
+---
+
+# **Transcritômica**
+
+- É o termo atribuído ao estudo do conjunto de transcritos (sequências de RNA) de um organismo, tem como principal objetivo obter, analisar e interpretar dados da expressão gênica.
+
+--
+
+- **Proteômica**
+
+    - É o termo atribuído a estudos globais e em larga escala de Proteomas (conjunto de proteínas e suas isoformas). Tem como principal objetivo fornecer arcabouço necessário para o entendimento de processos fisiológicos e das relações entre [genótipo](https://www.genome.gov/genetics-glossary/genotype) e [fenótipo](https://www.genome.gov/genetics-glossary/Phenotype).
+
+--
+
+- **Metabolômica**
+
+    - É o termo atribuído aos estudos e análises mais abrangentes e quantitativos do metaboloma (conjunto de metabólitos) de um organismo.
+
+---
+class: middle
+
+```{r, fig.align='center', fig.cap='Resumo gráfico das principais ômicas aplicadas em Bioinformática.', out.width='700', echo=FALSE}
+include_graphics('images/Infusion-of-biological-omics-with-bioinformatics.png')
+```
+
+---
+class: inverse, center, middle
+
+# Aplicações recentes
+
+---
+
+# COVID-19
+
+- A Bioinformática está tendo papel fundamental no estudo, catalogação e vigilância da COVID-19 (causada pelo Sars-CoV-2)
+
+    - [Essential interpretations of bioinformatics in COVID-19 pandemic](https://www.sciencedirect.com/science/article/abs/pii/S2214540020301997?via%3Dihub)
+    
+    - [Computational strategies to combat COVID-19: useful tools to accelerate SARS-CoV-2 and coronavirus research](https://academic.oup.com/bib/article/22/2/642/5955939) (resumo mostrado abaixo)
+    
+```{r, fig.align='center', fig.cap='', out.width='700', echo=FALSE}
+include_graphics('images/covid-19-tools-review-abstract.png')
+```
+
+---
+
+# COVID-19
+
+- Diversas ferramentas e bancos de dados estão se provando essenciais nesta luta:
 
 ---
 
