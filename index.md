@@ -10,4 +10,4 @@ Olá a todos, esta página foi criada com o objetivo de arquivar os slides e cad
 
 ### Aula teórica
 
-* Slides utilizados durante a aula teórica do minicurso: A relevância e as aplicações da Bioinformática no cenário atual](./slides/slides.html)
+* [Slides utilizados durante a aula teórica do minicurso: A relevância e as aplicações da Bioinformática no cenário atual](./slides/slides.html)
