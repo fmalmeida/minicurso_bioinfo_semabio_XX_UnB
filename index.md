@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main?filepath=aula_pratica)
 
 ## Olá
 
