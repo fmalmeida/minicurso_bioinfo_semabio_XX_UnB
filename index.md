@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main)
+
 ## Olá
 
 Autor: Felipe Marques de Almeida
@@ -11,3 +13,7 @@ Olá a todos, esta página foi criada com o objetivo de arquivar os slides e cad
 ### Aula teórica
 
 * [Slides utilizados durante a aula teórica do minicurso: A relevância e as aplicações da Bioinformática no cenário atual](./slides/slides.html)
+
+### Aula prática
+
+* Usando [binder](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main)
