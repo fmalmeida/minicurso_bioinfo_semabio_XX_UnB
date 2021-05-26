@@ -17,4 +17,4 @@ Olá a todos, esta página foi criada com o objetivo de arquivar os slides e cad
 ### Aula prática
 
 * [Como usar cadernos Jupyter?](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main?filepath=aula_pratica%2Fentendendo_cadernos_jupyter.ipynb)
-* Usando [binder](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main)
+* [Aula prática](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main?filepath=aula_pratica%2Faula_pratica.ipynb)
