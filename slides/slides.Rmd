@@ -253,7 +253,7 @@ class: middle
 
 # Os pilares da Bioinformática
 
-- Para alcançar analisar os dados e alcançar seus objetivos, a Bioinformática conta com dois pilares fundamentais:
+- Para analisar os dados e alcançar seus objetivos, a Bioinformática conta com três pilares fundamentais:
 
     - **Bancos de dados biológicos**
     - **_Software_ e ferramentas especializadas**.
@@ -471,21 +471,17 @@ class: middle
 
 ---
 
-# **Genômica**
+# Áreas da Bioinformática
 
-- É o termo atribuído ao estudo do genoma, objetivando entender a organização e a função de genes e da informação genética.
+- **Genômica**
+
+    - É o termo atribuído ao estudo do genoma, objetivando entender a organização e a função de genes e da informação genética.
 
 --
 
-```{r, fig.align='center', fig.cap='', out.width='500', echo=FALSE}
-include_graphics("images/captura_cancer_genomics_abstract.png")
-```
+- **Transcritômica**
 
----
-
-# **Transcritômica**
-
-- É o termo atribuído ao estudo do conjunto de transcritos (sequências de RNA) de um organismo, tem como principal objetivo obter, analisar e interpretar dados da expressão gênica.
+    - É o termo atribuído ao estudo do conjunto de transcritos (sequências de RNA) de um organismo, tem como principal objetivo obter, analisar e interpretar dados da expressão gênica.
 
 --
 
@@ -529,8 +525,25 @@ include_graphics('images/covid-19-tools-review-abstract.png')
 
 # COVID-19
 
-- Diversas ferramentas e bancos de dados estão se provando essenciais nesta luta:
+- Diversas ferramentas e bancos de dados estão se provando essenciais nesta luta
 
+    - [GISAID](https://www.gisaid.org/)
+        - [Colaborações GISAID](https://www.gisaid.org/collaborations/enabled-by-hcov-19-data-from-gisaid/)
+    - [covSPECTRUM](https://cov-spectrum.ethz.ch/explore/Switzerland/AllSamples/AllTimes)
+    - [Covid Regeneron](https://covid19dashboard.regeneron.com/?tab=Home&subTab=Europe)
+    - [Mutation reports](https://outbreak.info/situation-reports)
+    - [CoVariants](https://covariants.org/)
+    - [covizu](http://filogeneti.ca/covizu/)
+    - [Nextstrain](https://nextstrain.org)
+    - [Pangoling lineage assigner](https://pangolin.cog-uk.io/)
+    - [Cadde - USP / Oxford](https://www.caddecentre.org/)
+    - [Outbreak - USP](https://outbreak.sysbio.tools/)
+    - [Covid-miner](https://covid-miner.ifo.gov.it/app/home)
+    - Entre outras
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt0[
+  Algumas destas ferramentas serão exemplificadas / mostradas nos próximos slides ou utilizadas na aula prática.
+]
 ---
 
 # Referências
