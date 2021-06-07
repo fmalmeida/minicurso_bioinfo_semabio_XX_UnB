@@ -3,4 +3,5 @@ set -ex
 pip install bash_kernel
 python -m bash_kernel.install
 pip install ncbi-acc-download
-mamba install -y -c bioconda mafft iqtree
+pip install plottree
+mamba install -y -c bioconda -c etetoolkit ete3 mafft iqtree
