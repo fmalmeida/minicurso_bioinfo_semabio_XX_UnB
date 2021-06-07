@@ -1,1 +1,2 @@
 ncbi-acc-download
+bash_kernel
