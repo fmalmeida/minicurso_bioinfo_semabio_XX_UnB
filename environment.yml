@@ -4,3 +4,8 @@ channels:
   - bioconda
 dependencies:
   - mafft
+  - python
+  - pip
+  - pip:
+    - ncbi-acc-download
+    - bash_kernel
