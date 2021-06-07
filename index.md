@@ -19,4 +19,4 @@ Olá a todos, esta página foi criada com o objetivo de arquivar os slides e cad
 * Como usar cadernos Jupyter?
     + Após clicar em "launch binder", selecione o caderno entendendo_cadernos_jupyter.ipynb
 * Aula prática
-    + + Após clicar em "launch binder", selecione o caderno aula_pratica.ipynb
+    + Após clicar em "launch binder", selecione o caderno aula_pratica.ipynb
