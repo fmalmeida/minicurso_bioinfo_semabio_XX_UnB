@@ -14,7 +14,9 @@ Olá a todos, esta página foi criada com o objetivo de arquivar os slides e cad
 
 ### Aula prática
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main?filepath=aula_pratica) --> complete env
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/main?filepath=aula_pratica)
 
-* [Como usar cadernos Jupyter?](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/HEAD?filepath=aula_pratica%2Fentendendo_cadernos_jupyter.ipynb)
-* [Aula prática](https://mybinder.org/v2/gh/fmalmeida/minicurso_bioinfo_semabio_XX_UnB/HEAD?filepath=aula_pratica%2Faula_pratica.ipynb)
+* Como usar cadernos Jupyter?
+    + Após clicar em "launch binder", selecione o caderno entendendo_cadernos_jupyter.ipynb
+* Aula prática
+    + Após clicar em "launch binder", selecione o caderno aula_pratica.ipynb
