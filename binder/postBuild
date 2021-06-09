@@ -4,4 +4,9 @@ pip install bash_kernel
 python -m bash_kernel.install
 pip install ncbi-acc-download
 pip install plottree
+pip install jupyter_contrib_nbextensions
+pip install hide_code
+jupyter nbextension install --py hide_code
+jupyter nbextension enable --py hide_code
+jupyter serverextension enable --py hide_code
 mamba install -y -c bioconda -c etetoolkit ete3 mafft iqtree
