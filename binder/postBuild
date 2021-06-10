@@ -5,4 +5,5 @@ python -m bash_kernel.install
 pip install ncbi-acc-download
 pip install plottree
 pip install pandas
-mamba install -y -c bioconda -c etetoolkit ete3 mafft iqtree pangolin nextclade_js
+mamba install -y -c bioconda mafft iqtree pangolin nextclade_js
+mamba create -n ete3 -y -c bioconda -c etetoolkit ete3
