@@ -114,13 +114,13 @@ include_graphics('images/bioinformatics-computer-science-computational-biology.p
 
 - Campo interdisciplinar
 
-    - Biologia, Genética, ciência da computação, estatística e matemática.
+    - Biologia, Genética, Ciência da Computação, Estatística e Matemática.
 
 - Tem como principal **missão** solucionar problemas e questionamentos biológicos através de experimentos e metodologias **computacionais**.
 
 --
 
-    - Em resumo, é a área da ciência da computação que trabalha com análises de sequências de moléculas Biológicas.
+    - Em resumo, é a área da ciência da computação que trabalha com análises de sequências de moléculas biológicas.
     
     - Geralmente sequências de DNA, RNA e proteínas.
 --
@@ -378,12 +378,12 @@ include_graphics("images/genome-assembly.png")
     
     - Por isso, é muito importante entendê-las antes de usá-las para procurar aquela que mais se adeque aos seus objetivos ... Muitas vezes, mais de uma serão necessárias para comparar ou complementar os resultados
     
-```{r, fig.align='center', fig.cap='', out.width='800', echo=FALSE}
-include_graphics("images/genome-assembly-workflow.png")
+```{r, fig.align='center', fig.cap='', out.width='600', echo=FALSE}
+include_graphics("images/many-tools.png")
 ```
 
 .footnote[
-<p style="font-size:0.5em">Fonte: https://f1000research.com/articles/7-148</p> 
+<p style="font-size:0.5em">Fonte: https://doi.org/10.1099/mgen.0.000409</p> 
 ]
 
 ---
@@ -426,9 +426,9 @@ name: aplicacoes
 # Aplicações da Bioinformática
 
 .pull-left[
-- Sem dúvidas, a aplicação mais comum é para predizer o conteúdo/potencial genético e proteico de um genoma.
+- Sem dúvidas, a aplicação mais comum é a predição do conteúdo/potencial genético e proteico de um genoma.
 
-    - Determinar as funções gênicas ou proteicas.
+    - Ou seja, determinar as funções gênicas ou proteicas.
   
 - Outros casos também bastante comuns são:
 
@@ -571,7 +571,7 @@ include_graphics('images/gisaid-mutations.png')
 # Nextstrain
 
 - Nextstrain é uma ferramenta pública e gratuita idealizada para o monitoramento rápido e em tempo real da evolução de patógenos ([docs](https://docs.nextstrain.org/en/latest/index.html)).
-    - Atualmente, o grupo mantém estudos focados e atualmente se encontra engajado na vigilância do SARS-CoV-2.
+    - Atualmente, o grupo mantém estudos focados e se encontra engajado na vigilância do SARS-CoV-2.
 
 ```{r, fig.align='center', fig.cap='', out.width='500', out.height='400', echo=FALSE}
 include_graphics('images/nexstrain-home.png')
